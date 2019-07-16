@@ -56,6 +56,7 @@
 		BEE6B677416CA71C981D1D3F60B18C96 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C564E836C1D8E7E09F5718CC09FB77 /* Alamofire.swift */; };
 		D3D8C379C6E4FB487E5ABD6800AD7B7E /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E0332666BC8C301180D888F1CCC7ED /* DispatchQueue+Alamofire.swift */; };
 		D57F539422DDD90C00E1141B /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57F539322DDD90C00E1141B /* Demo.swift */; };
+		D57F539622DDD98C00E1141B /* SMFull.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57F539522DDD98C00E1141B /* SMFull.storyboard */; };
 		D65C254F5ABF2CB5ECEE50FE8F8E1A80 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30122AE6A3FA9C0E891037263CEC5DE7 /* Response.swift */; };
 		E3747EC31FCCA97D75A81FC700CF7E24 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947ECC029D991DAD85B788C3AFA57541 /* ResponseSerialization.swift */; };
 		F13F2AA7F2E6D95A181CAB99B900D531 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34744E43DAA1CD56FC48DCB251B5C38 /* ServerTrustPolicy.swift */; };
@@ -169,6 +170,7 @@
 		BF021E7671B874862C118C1774C4B47A /* Pods-SDKDayCheo_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SDKDayCheo_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		D4E29AE8A57A99DC14497AAA5D49D795 /* Pods-SDKDayCheo_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SDKDayCheo_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D57F539322DDD90C00E1141B /* Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Demo.swift; path = SDKDayCheo/Classes/Demo.swift; sourceTree = "<group>"; };
+		D57F539522DDD98C00E1141B /* SMFull.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = SMFull.storyboard; path = SDKDayCheo/Assets/SMFull.storyboard; sourceTree = "<group>"; };
 		D6F88FC0C78BECB318DAB78EBE513078 /* SDKDayCheo.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDKDayCheo.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		D71948AB1C5EF22061F7BE7C72BC16D9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		D76B4410B8E6A3525DA80E4C6B5CF1A1 /* Pods_SDKDayCheo_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDKDayCheo_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -235,6 +237,7 @@
 				A84EE2BD55F392EA1CDBCE72D92C23E1 /* Pod */,
 				2DAC2EDB609A963D999D883E1478661D /* Support Files */,
 				D57F539322DDD90C00E1141B /* Demo.swift */,
+				D57F539522DDD98C00E1141B /* SMFull.storyboard */,
 			);
 			name = SDKDayCheo;
 			path = ../..;
@@ -596,6 +599,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D57F539622DDD98C00E1141B /* SMFull.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
