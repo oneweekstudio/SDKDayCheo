@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SDKDayCheo_Example' do
+  pod 'SDKDayCheo', :path => '../'
+
+  target 'SDKDayCheo_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

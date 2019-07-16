@@ -1,0 +1,22 @@
+{
+  "name": "SDKDayCheo",
+  "version": "0.1.0",
+  "summary": "A short description of SDKDayCheo.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/truongtvd/SDKDayCheo",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "truongtvd": "truong@smartmove.vn"
+  },
+  "source": {
+    "git": "https://github.com/truongtvd/SDKDayCheo.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SDKDayCheo/Classes/**/*"
+}

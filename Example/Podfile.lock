@@ -1,0 +1,16 @@
+PODS:
+  - SDKDayCheo (0.1.0)
+
+DEPENDENCIES:
+  - SDKDayCheo (from `../`)
+
+EXTERNAL SOURCES:
+  SDKDayCheo:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SDKDayCheo: 6eaf35942d9af6e8bfce507ea31eb4fe9f73b486
+
+PODFILE CHECKSUM: e7165507a33bfaa54c5a89a89fa6784d14469240
+
+COCOAPODS: 1.7.4
