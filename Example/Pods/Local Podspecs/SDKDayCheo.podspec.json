@@ -1,9 +1,10 @@
 {
   "name": "SDKDayCheo",
   "version": "0.1.0",
-  "summary": "A short description of SDKDayCheo.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/truongtvd/SDKDayCheo",
+  "summary": "SDKDayCheo V2",
+  "swift_versions": "5.0",
+  "description": "This description is used to generate tags and improve search results",
+  "homepage": "https://github.com/oneweekstudio/SDKDayCheo",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +13,29 @@
     "truongtvd": "truong@smartmove.vn"
   },
   "source": {
-    "git": "https://github.com/truongtvd/SDKDayCheo.git",
+    "git": "https://github.com/oneweekstudio/SDKDayCheo.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
-  "source_files": "SDKDayCheo/Classes/**/*"
+  "source_files": "SDKDayCheo/Classes/**/*",
+  "resource_bundles": {
+    "SDKDayCheo": [
+      "SDKDayCheo/Assets/*"
+    ]
+  },
+  "static_framework": true,
+  "frameworks": "UIKit",
+  "ios": {
+    "dependencies": {
+      "Alamofire": [
+
+      ],
+      "MagicMapper": [
+
+      ]
+    }
+  },
+  "swift_version": "5.0"
 }

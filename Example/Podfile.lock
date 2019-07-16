@@ -1,15 +1,26 @@
 PODS:
-  - SDKDayCheo (0.1.0)
+  - Alamofire (4.8.2)
+  - MagicMapper (1.0.2)
+  - SDKDayCheo (0.1.0):
+    - Alamofire
+    - MagicMapper
 
 DEPENDENCIES:
   - SDKDayCheo (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - MagicMapper
 
 EXTERNAL SOURCES:
   SDKDayCheo:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SDKDayCheo: 6eaf35942d9af6e8bfce507ea31eb4fe9f73b486
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  MagicMapper: 1909d0e15b7a3ef7faec2c5e30791eed0815e934
+  SDKDayCheo: e0966a70b19ae25fe578743d0fcae26d477860f3
 
 PODFILE CHECKSUM: e7165507a33bfaa54c5a89a89fa6784d14469240
 
