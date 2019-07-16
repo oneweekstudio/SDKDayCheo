@@ -46,7 +46,7 @@
 		E0D018EF9F215D0F9FC67BD5 /* Pods_SDKDayCheo_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDKDayCheo_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E55DC0157AFD6CE39A2E016E /* Pods-SDKDayCheo_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKDayCheo_Example.release.xcconfig"; path = "Target Support Files/Pods-SDKDayCheo_Example/Pods-SDKDayCheo_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F428B0AF2BDAFFA67AFA0C1D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		FB34C58A9FAF89A47D6A0F49 /* SDKDayCheo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SDKDayCheo.podspec; path = ../SDKDayCheo.podspec; sourceTree = "<group>"; };
+		FB34C58A9FAF89A47D6A0F49 /* SDKDayCheo.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SDKDayCheo.podspec; path = ../SDKDayCheo.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
