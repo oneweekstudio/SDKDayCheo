@@ -1,5 +1,5 @@
 import XCTest
-import SDKDayCheo
+//import SDKDayCheo
 
 class Tests: XCTestCase {
     
