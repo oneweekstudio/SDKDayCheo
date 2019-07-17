@@ -7,14 +7,24 @@
 //
 
 import UIKit
+import SDKDayCheo
+class ViewController: UIViewController,SMInterstitialDelegate {
 
-class ViewController: UIViewController {
-
+    var full:SMInterstitial!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        SMConfig.setDebug(true)
+        full = SMInterstitial()
+       
+        full.rootViewController = self
+        full.delegate = self
+        full.load()
     }
 
+    @IBAction func click(_ sender: Any) {
+        full.show()
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -65,6 +65,7 @@ class SMNetwork: NSObject {
         print(params)
         Alamofire.request(kUrl,method: .get, parameters: params)
             .responseJSON {response in
+            
                 switch (response.result){
                 case.success(let data):
                     success(data as! KeyValue)
@@ -83,6 +84,7 @@ class SMNetwork: NSObject {
         params.updateValue(type, forKey: "ad_format")
         Alamofire.request(kUrl,method: .get, parameters: params)
             .responseJSON {response in
+                print(response.request?.url?.absoluteString)
                 switch (response.result){
                 case.success(let data):
                     success(data as! KeyValue)

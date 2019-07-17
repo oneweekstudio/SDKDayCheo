@@ -33,6 +33,7 @@ public class SMInterstitial: NSObject {
     }
      public func load(){
         network.getFull(type: "full", success: { (json) in
+            print(json)
             if json["msg"] as? String == "Cross is not running." || json["error"] as? NSNumber == 1{
                 print("Tắt Quảng Cáo Chéo")
                 if self.delegate != nil{
@@ -60,9 +61,7 @@ public class SMInterstitial: NSObject {
     }
     public func show() {
         if rootViewController != nil && self.smAds != nil && self.isLoad == true{
-            let pathBundle = Bundle.main.path(forResource: "SMDayCheo", ofType: "bundle")
-            let bundle = Bundle(path: pathBundle ?? "")
-            let smFullVC = UIStoryboard.init(name: "SMFull", bundle: bundle).instantiateViewController(withIdentifier: "SMFullVC") as! SMFullVC
+            let smFullVC = UIStoryboard.init(name: "SMFull", bundle: getBundlePath()).instantiateViewController(withIdentifier: "SMFullVC") as! SMFullVC
             smFullVC.modalPresentationStyle = .overCurrentContext
             smFullVC.smAds = self.smAds
             smFullVC.hidesBottomBarWhenPushed = true
