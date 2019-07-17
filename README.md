@@ -12,19 +12,19 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ```ruby
 SMConfig.setDebug(true)
 ```
-### Code
-
+### Interstitial
+Khởi tạo quảng cáo full
 ```ruby
 full = SMInterstitial()
 full.rootViewController = self
 full.delegate = self
 full.load()
 ```
-### Show
+Hiển thị quảng cáo full
 ```ruby
 full.show()
 ```
-### Delegate
+Delegate
 ```ruby
 @objc optional func interstitialLoaded(interstitial:SMInterstitial)
 @objc optional func interstitialError()
