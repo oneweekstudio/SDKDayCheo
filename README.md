@@ -17,7 +17,7 @@ SDKDayCheo is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'SDKDayCheo'
+pod 'SDKDayCheo', :git => 'https://github.com/oneweekstudio/SDKDayCheo.git', :branch => 'master'
 ```
 
 ## Author
