@@ -17,4 +17,5 @@ public class SMAds: NSObject,Mappable {
     public var desc = ""
     public var screenshots:[String] = []
     public var link = ""
+    public var assets:[SMAssets] = []
 }

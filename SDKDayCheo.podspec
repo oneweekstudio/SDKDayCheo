@@ -43,4 +43,5 @@ Pod::Spec.new do |s|
   # s.dependency 'AFNetworking', '~> 2.3'
   s.ios.dependency 'Alamofire'
   s.ios.dependency 'MagicMapper'
+
 end

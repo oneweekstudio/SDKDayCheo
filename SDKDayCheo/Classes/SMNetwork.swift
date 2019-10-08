@@ -43,12 +43,14 @@ class SMNetwork: NSObject {
     }
     
     public func getResponse(_ url:String ,success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
+        
+        
         Alamofire.request(url)
-            .responseJSON {response in
+            .responseString {response in
                 switch (response.result){
                 case.success(let data):
-                    success(data as! KeyValue)
-                    
+//                    success(data as! KeyValue)
+                    print(data)
                     break
                     
                 case .failure(let error):
@@ -79,12 +81,11 @@ class SMNetwork: NSObject {
                 
         }
     }
-    public func getFull(type:String,success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
+    public func getFull(success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
         var params:[String:Any] = baseParam
-        params.updateValue(type, forKey: "ad_format")
+        params.updateValue("1", forKey: "number")
         Alamofire.request(kUrl,method: .get, parameters: params)
             .responseJSON {response in
-                print(response.request?.url?.absoluteString)
                 switch (response.result){
                 case.success(let data):
                     success(data as! KeyValue)

@@ -32,7 +32,7 @@ public class SMInterstitial: NSObject {
         }
     }
      public func load(){
-        network.getFull(type: "full", success: { (json) in
+        network.getFull(success: { (json) in
             print(json)
             if json["msg"] as? String == "Cross is not running." || json["error"] as? NSNumber == 1{
                 print("Tắt Quảng Cáo Chéo")

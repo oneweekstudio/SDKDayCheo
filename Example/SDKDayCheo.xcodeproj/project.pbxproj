@@ -213,10 +213,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 97VVP8LDF2;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 97VVP8LDF2;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -499,6 +501,7 @@
 			baseConfigurationReference = 56A9C9AC1E8C62D098969AAA /* Pods-SDKDayCheo_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 97VVP8LDF2;
 				INFOPLIST_FILE = SDKDayCheo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -515,6 +518,7 @@
 			baseConfigurationReference = E55DC0157AFD6CE39A2E016E /* Pods-SDKDayCheo_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 97VVP8LDF2;
 				INFOPLIST_FILE = SDKDayCheo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -530,6 +534,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CCF3B3EE1BC4AEC31B6052C0 /* Pods-SDKDayCheo_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 97VVP8LDF2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -552,6 +557,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 68A7B0B32AFD2965F2A9CA48 /* Pods-SDKDayCheo_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 97VVP8LDF2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

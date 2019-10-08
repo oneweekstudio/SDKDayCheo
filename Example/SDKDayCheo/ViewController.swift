@@ -8,14 +8,15 @@
 
 import UIKit
 import SDKDayCheo
+
 class ViewController: UIViewController,SMInterstitialDelegate {
 
     var full:SMInterstitial!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         SMConfig.setDebug(true)
         full = SMInterstitial()
-       
         full.rootViewController = self
         full.delegate = self
         full.load()
