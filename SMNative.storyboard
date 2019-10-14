@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Native Controller-->
+        <scene sceneID="AyK-zs-ryo">
+            <objects>
+                <viewController storyboardIdentifier="SMNativeController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="seA-t9-aky" customClass="SMNativeController" customModule="Alamofire" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dOu-LD-4Dn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ENR-Qm-lcr">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading SMNative" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqv-Ee-TQY">
+                                <rect key="frame" x="8" y="482.5" width="398" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ENR-Qm-lcr" firstAttribute="centerY" secondItem="dOu-LD-4Dn" secondAttribute="centerY" id="1iP-ra-X65"/>
+                            <constraint firstItem="ENR-Qm-lcr" firstAttribute="centerX" secondItem="dOu-LD-4Dn" secondAttribute="centerX" id="Tn0-zc-bfm"/>
+                            <constraint firstItem="361-uW-Kj2" firstAttribute="trailing" secondItem="Nqv-Ee-TQY" secondAttribute="trailing" constant="8" id="br0-KJ-dCo"/>
+                            <constraint firstItem="Nqv-Ee-TQY" firstAttribute="top" secondItem="ENR-Qm-lcr" secondAttribute="bottom" constant="16" id="pXh-sZ-Ycx"/>
+                            <constraint firstItem="Nqv-Ee-TQY" firstAttribute="leading" secondItem="361-uW-Kj2" secondAttribute="leading" constant="8" id="tbV-dZ-Igy"/>
+                            <constraint firstItem="Nqv-Ee-TQY" firstAttribute="centerX" secondItem="dOu-LD-4Dn" secondAttribute="centerX" id="x37-fj-1xV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="361-uW-Kj2"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Arn-WJ-Bas" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="83" y="106"/>
+        </scene>
+    </scenes>
+</document>

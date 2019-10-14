@@ -31,9 +31,11 @@ class ViewController: UIViewController,SMInterstitialDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func callSMInterstitial(_ sender: Any) {
+    @IBAction func callSMNativeView(_ sender: Any) {
+//        let adView = SMNative
         
     }
 
+    
 }
 

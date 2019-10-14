@@ -56,6 +56,7 @@
 		F13F2AA7F2E6D95A181CAB99B900D531 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34744E43DAA1CD56FC48DCB251B5C38 /* ServerTrustPolicy.swift */; };
 		F767C5ACC6D4D049A10580C43F7B0E1C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		F7B74645E07C39771156A1FA413B98D4 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F3E69D3C805DDB8C59D14FD815F759E6 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA214B6023548194006EA49B /* SMNativeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA214B5F23548194006EA49B /* SMNativeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,10 +131,10 @@
 		559DA7E3FB7A26C1FCE3241ABA76A0F9 /* MagicMapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MagicMapper-umbrella.h"; sourceTree = "<group>"; };
 		56C50367132A5287D69F58F2FC7FA6B6 /* Pods-SDKDayCheo_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SDKDayCheo_Example-resources.sh"; sourceTree = "<group>"; };
 		5BD580745DF13D2AA6F0D532836A83EF /* SMAssets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMAssets.swift; path = SDKDayCheo/Classes/SMAssets.swift; sourceTree = "<group>"; };
-		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6064B9EA7EAE61E4F5ACFCFE226AD70D /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
 		610158215C0CE1E4F9453D6F742FAE48 /* SDKDayCheo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDKDayCheo.xcconfig; sourceTree = "<group>"; };
-		632CE8595C4FA38365FF07EF69704ED5 /* SDKDayCheo.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SDKDayCheo.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		632CE8595C4FA38365FF07EF69704ED5 /* SDKDayCheo.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SDKDayCheo.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		634459A38F2D932910162D0AC68F3A93 /* Mappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mappable.swift; path = MagicMapper/Mappable.swift; sourceTree = "<group>"; };
 		639783644C96679B17CB63548FBFB7C8 /* SMFullVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMFullVC.swift; path = SDKDayCheo/Classes/SMFullVC.swift; sourceTree = "<group>"; };
 		653CF6B65DF7980CAEE0A129276F177E /* String+Mappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Mappable.swift"; path = "MagicMapper/String+Mappable.swift"; sourceTree = "<group>"; };
@@ -143,25 +144,25 @@
 		7163C1A07D070E5C339E0F4095022DDF /* MagicMapper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MagicMapper.modulemap; sourceTree = "<group>"; };
 		71D6521A71A3FC49BA4FC05ADE1520F3 /* Array+Mappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+Mappable.swift"; path = "MagicMapper/Array+Mappable.swift"; sourceTree = "<group>"; };
 		743138DA8FE98D8E5ECFDB7F6B9DA46A /* Dictionary+Value.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+Value.swift"; path = "MagicMapper/Dictionary+Value.swift"; sourceTree = "<group>"; };
-		749359F0437299D70DA65CF7E123B124 /* MagicMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MagicMapper.framework; path = MagicMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		749359F0437299D70DA65CF7E123B124 /* MagicMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MagicMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		757E5FA1800D050017B520BA22B6EF74 /* Pods-SDKDayCheo_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SDKDayCheo_Example-frameworks.sh"; sourceTree = "<group>"; };
 		79D4D58F7A4BB4CF367A43E87686EE87 /* Bool+Mappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bool+Mappable.swift"; path = "MagicMapper/Bool+Mappable.swift"; sourceTree = "<group>"; };
 		7AC2AD08C8048BD2C2B10765594B5139 /* Pods-SDKDayCheo_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SDKDayCheo_Tests-umbrella.h"; sourceTree = "<group>"; };
 		7AFE23C80DED0B36F770AA7CAB51BB2B /* SDKDayCheo-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDKDayCheo-prefix.pch"; sourceTree = "<group>"; };
 		7FBD455AF57AB4B39BD6EF312F4831FA /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
 		80C7D1785BBF65CE5B33EED8B18A6E40 /* Pods-SDKDayCheo_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SDKDayCheo_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		815F4A32BBCC8A886180C4C083F3397B /* Pods_SDKDayCheo_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SDKDayCheo_Tests.framework; path = "Pods-SDKDayCheo_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		815F4A32BBCC8A886180C4C083F3397B /* Pods_SDKDayCheo_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDKDayCheo_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A0EEE1B23F193EDE5C0ED913055441 /* Pods-SDKDayCheo_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SDKDayCheo_Example.release.xcconfig"; sourceTree = "<group>"; };
 		8CABEBCC1FE1BFECDFBEEF328AA10E0F /* SMNetwork.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMNetwork.swift; path = SDKDayCheo/Classes/SMNetwork.swift; sourceTree = "<group>"; };
 		91C564E836C1D8E7E09F5718CC09FB77 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		947ECC029D991DAD85B788C3AFA57541 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
 		968DC058BD8759F2268CB56C8B92F112 /* Dictionary+Mappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+Mappable.swift"; path = "MagicMapper/Dictionary+Mappable.swift"; sourceTree = "<group>"; };
 		9C8EA12B7DD15F5A78E937CE373C12C3 /* SDKDayCheo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDKDayCheo-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DA08F7266E02D063451F1777134FFD4 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
 		A0FA8223C9FF256203388816999520F4 /* Pods-SDKDayCheo_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SDKDayCheo_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A17487F7A9E31CF401C1A2B9DE035985 /* Pods-SDKDayCheo_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SDKDayCheo_Example-umbrella.h"; sourceTree = "<group>"; };
-		A1B34899BE8863EF8A27C885B28C4929 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		A1B34899BE8863EF8A27C885B28C4929 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A49B3286072D9515F2A8B44A837587E2 /* Pods-SDKDayCheo_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SDKDayCheo_Tests-Info.plist"; sourceTree = "<group>"; };
 		A98C8AC916D4C9FA12CD90CD66A40C31 /* SDKDayCheo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SDKDayCheo.modulemap; sourceTree = "<group>"; };
 		B19AA9CB49971E0962EFCF70BA7A2BCE /* Pods-SDKDayCheo_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SDKDayCheo_Example-Info.plist"; sourceTree = "<group>"; };
@@ -174,10 +175,10 @@
 		BF021E7671B874862C118C1774C4B47A /* Pods-SDKDayCheo_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SDKDayCheo_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		CA7526B7ECEEE37948D0828506A043AD /* SMExtention.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMExtention.swift; path = SDKDayCheo/Classes/SMExtention.swift; sourceTree = "<group>"; };
 		D4E29AE8A57A99DC14497AAA5D49D795 /* Pods-SDKDayCheo_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SDKDayCheo_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D6F88FC0C78BECB318DAB78EBE513078 /* SDKDayCheo.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SDKDayCheo.bundle; path = "SDKDayCheo-SDKDayCheo.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D76B4410B8E6A3525DA80E4C6B5CF1A1 /* Pods_SDKDayCheo_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SDKDayCheo_Example.framework; path = "Pods-SDKDayCheo_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6F88FC0C78BECB318DAB78EBE513078 /* SDKDayCheo.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDKDayCheo.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D76B4410B8E6A3525DA80E4C6B5CF1A1 /* Pods_SDKDayCheo_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDKDayCheo_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5EFCA8B88E5CBEDA591B649B1A40F5 /* Image.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Image.xcassets; path = SDKDayCheo/Assets/Image.xcassets; sourceTree = "<group>"; };
-		DB1BF9DB21E3880AFDFE5406F4BF5192 /* SDKDayCheo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SDKDayCheo.framework; path = SDKDayCheo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB1BF9DB21E3880AFDFE5406F4BF5192 /* SDKDayCheo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDKDayCheo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB972BD0E38C56B379159FBCEA598FD2 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
 		DBFA4C160E352509C9D305EECD7DF2A4 /* Pods-SDKDayCheo_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SDKDayCheo_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E364B3E215CE8EF99C5B938A921BD75D /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
@@ -191,7 +192,11 @@
 		F34744E43DAA1CD56FC48DCB251B5C38 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		F34F08359C8D45D4AF054B90CA89CB79 /* Alamofire-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Alamofire-Info.plist"; sourceTree = "<group>"; };
 		F3E69D3C805DDB8C59D14FD815F759E6 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		F4744CDFF62F29C245C8938FAE7F263B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		F4744CDFF62F29C245C8938FAE7F263B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		FA214B5C23547BD8006EA49B /* SMNativeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMNativeDelegate.swift; sourceTree = "<group>"; };
+		FA214B5D2354809E006EA49B /* SMNative.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SMNative.storyboard; sourceTree = "<group>"; };
+		FA214B5E23548152006EA49B /* SMNativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMNativeView.swift; sourceTree = "<group>"; };
+		FA214B5F23548194006EA49B /* SMNativeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMNativeController.swift; sourceTree = "<group>"; };
 		FE8C11F07BEE92961F17530061C8987A /* SDKDayCheo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SDKDayCheo-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -339,7 +344,6 @@
 				53FAD6841EA384408C427F15B783916D /* Validation.swift */,
 				33298FD481E55333D3D8D9AE1C9223C0 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -361,6 +365,7 @@
 			children = (
 				DA5EFCA8B88E5CBEDA591B649B1A40F5 /* Image.xcassets */,
 				26C3210CF0416321D9412AD355D1A18E /* SMFull.storyboard */,
+				FA214B5D2354809E006EA49B /* SMNative.storyboard */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -378,7 +383,6 @@
 				653CF6B65DF7980CAEE0A129276F177E /* String+Mappable.swift */,
 				FDDD1B55924581920367D8F299FF73CC /* Support Files */,
 			);
-			name = MagicMapper;
 			path = MagicMapper;
 			sourceTree = "<group>";
 		};
@@ -413,6 +417,7 @@
 		DBABB4E4A06A277323DA9A677BA3D0A3 /* SDKDayCheo */ = {
 			isa = PBXGroup;
 			children = (
+				FA214B5823547AF7006EA49B /* Classes */,
 				E46D49381211E92EF7A8B8579F16B66A /* SMAds.swift */,
 				5BD580745DF13D2AA6F0D532836A83EF /* SMAssets.swift */,
 				6EF50731010272CCF2B2569C9EC14962 /* SMConstant.swift */,
@@ -454,6 +459,25 @@
 				632CE8595C4FA38365FF07EF69704ED5 /* SDKDayCheo.podspec */,
 			);
 			name = Pod;
+			sourceTree = "<group>";
+		};
+		FA214B5823547AF7006EA49B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FA214B5A23547B91006EA49B /* SMNative */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		FA214B5A23547B91006EA49B /* SMNative */ = {
+			isa = PBXGroup;
+			children = (
+				FA214B5E23548152006EA49B /* SMNativeView.swift */,
+				FA214B5C23547BD8006EA49B /* SMNativeDelegate.swift */,
+				FA214B5F23548194006EA49B /* SMNativeController.swift */,
+			);
+			name = SMNative;
+			path = SDKDayCheo/Classes/SMNative;
 			sourceTree = "<group>";
 		};
 		FDDD1B55924581920367D8F299FF73CC /* Support Files */ = {
@@ -730,6 +754,7 @@
 				931BBB8230A25161D5C37528A8F9FECF /* SessionManager.swift in Sources */,
 				AFC64B1097F7355FF423D6A73E9C7210 /* TaskDelegate.swift in Sources */,
 				933FDA5970AA525D6CB92BFEBA2BAB4A /* Timeline.swift in Sources */,
+				FA214B6023548194006EA49B /* SMNativeController.swift in Sources */,
 				53791F5E5F07400F92CFDFC89A432305 /* Validation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1036,8 +1061,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
