@@ -1,7 +1,7 @@
 PODS:
   - Alamofire (4.8.2)
   - MagicMapper (1.0.2)
-  - SDKDayCheo (1.0.0):
+  - SDKDayCheo (2.0.0):
     - Alamofire
     - MagicMapper
 
@@ -20,7 +20,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   MagicMapper: 1909d0e15b7a3ef7faec2c5e30791eed0815e934
-  SDKDayCheo: 0527987671492555e113f67ac91384168844c6a7
+  SDKDayCheo: 41167eaa97198a56aa08877612b93a73d4eb14f5
 
 PODFILE CHECKSUM: e7165507a33bfaa54c5a89a89fa6784d14469240
 
