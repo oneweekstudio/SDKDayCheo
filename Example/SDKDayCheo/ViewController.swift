@@ -30,6 +30,10 @@ class ViewController: UIViewController,SMInterstitialDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func callSMInterstitial(_ sender: Any) {
+        
+    }
 
 }
 

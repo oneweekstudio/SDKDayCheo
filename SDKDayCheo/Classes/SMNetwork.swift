@@ -84,10 +84,14 @@ class SMNetwork: NSObject {
     public func getFull(success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
         var params:[String:Any] = baseParam
         params.updateValue("1", forKey: "number")
+        
         Alamofire.request(kUrl,method: .get, parameters: params)
+            
             .responseJSON {response in
+//                print(response.request?.url)
                 switch (response.result){
                 case.success(let data):
+                    print(data)
                     success(data as! KeyValue)
                     
                     break
@@ -117,6 +121,7 @@ class SMNetwork: NSObject {
                 
         }
     }
+    
     public func getNativeList(success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
         var params:[String:Any] = baseParam
         params.updateValue("native_list", forKey: "ad_format")
