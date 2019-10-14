@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -34,9 +32,22 @@
                                     <action selector="click:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dhg-Qq-qsg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gB7-2h-IIV">
+                                <rect key="frame" x="127.5" y="50" width="120" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4gn-w5-4WO"/>
+                                    <constraint firstAttribute="width" constant="120" id="4wz-wm-vzN"/>
+                                </constraints>
+                                <state key="normal" title="Dialog"/>
+                                <connections>
+                                    <action selector="callSMNativeView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zth-5X-Isd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="gB7-2h-IIV" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="2G8-I2-C0K"/>
+                            <constraint firstItem="gB7-2h-IIV" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="kfg-xc-Yv6"/>
                             <constraint firstItem="Cxn-sz-SSj" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="o3K-7X-jnx"/>
                             <constraint firstItem="Cxn-sz-SSj" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="sAZ-aC-HHk"/>
                         </constraints>

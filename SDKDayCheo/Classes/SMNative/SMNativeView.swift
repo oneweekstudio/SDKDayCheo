@@ -16,7 +16,6 @@ open class SMNativeView : NSObject {
    open func present(_ controller: UIViewController) {
         let nativeViewController = UIStoryboard.init(name: "SMNative", bundle: getBundlePath()).instantiateViewController(withIdentifier: "SMNativeController") as! SMNativeController
         controller.present( nativeViewController, animated: true)
-        
     }
     
     

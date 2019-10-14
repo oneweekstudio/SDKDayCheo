@@ -33,7 +33,7 @@ class ViewController: UIViewController,SMInterstitialDelegate {
     
     @IBAction func callSMNativeView(_ sender: Any) {
         let adView = SMNativeView()
-        adView.
+        adView.present(self)
         
     }
 
