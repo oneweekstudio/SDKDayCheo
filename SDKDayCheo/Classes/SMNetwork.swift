@@ -50,7 +50,7 @@ class SMNetwork: NSObject {
                 switch (response.result){
                 case.success(let data):
 //                    success(data as! KeyValue)
-                    print(data)
+//                    print(data)
                     break
                     
                 case .failure(let error):
@@ -64,7 +64,7 @@ class SMNetwork: NSObject {
     public func getBanner(success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
         var params:[String:Any] = baseParam
         params.updateValue("banner", forKey: "ad_format")
-        print(params)
+//        print(params)
         Alamofire.request(kUrl,method: .get, parameters: params)
             .responseJSON {response in
             
@@ -91,7 +91,7 @@ class SMNetwork: NSObject {
 //                print(response.request?.url)
                 switch (response.result){
                 case.success(let data):
-                    print(data)
+//                    print(data)
                     success(data as! KeyValue)
                     
                     break

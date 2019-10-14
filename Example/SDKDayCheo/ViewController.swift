@@ -15,7 +15,7 @@ class ViewController: UIViewController,SMInterstitialDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        SMConfig.setDebug(true)
+//        SMConfig.setDebug(true)
         full = SMInterstitial()
         full.rootViewController = self
         full.delegate = self

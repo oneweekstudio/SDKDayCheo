@@ -8,8 +8,9 @@
 import Foundation
 public class SMConfig: NSObject {
     static var isDebug = false
-    public class func setDebug(_ isDebug:Bool=true){
+    public class func setDebug(_ isDebug:Bool = true){
         self.isDebug = isDebug
+        print("Debug mode: \(isDebug)")
     }
 }
 public var smbundle = SMConfig.isDebug ? "com.cloudmusic.mymp3" : Bundle.main.bundleIdentifier!

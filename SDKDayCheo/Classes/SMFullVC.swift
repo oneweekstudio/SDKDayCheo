@@ -38,7 +38,7 @@ class SMFullVC: UIViewController,UIWebViewDelegate {
         }, completion: nil)
     }
     @IBAction func actionGet(_ sender: Any) {
-        print("run")
+//        print("run")
 //        let sv = SFSafariViewController.init(url: URL.init(string: "https://flyingfacev2.page.link/test")!)
 //        self.present(sv, animated: true, completion: nil)
     
