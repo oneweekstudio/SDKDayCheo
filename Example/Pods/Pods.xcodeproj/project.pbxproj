@@ -857,6 +857,23 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		17B52747A062C1EFD093841FD41C5F4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07C7B7FD7451991D4D251BCEB24D7CE3 /* SDKDayCheo.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SDKDayCheo";
+				IBSC_MODULE = SDKDayCheo;
+				INFOPLIST_FILE = "Target Support Files/SDKDayCheo/ResourceBundle-SDKDayCheo-SDKDayCheo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				PRODUCT_NAME = SDKDayCheo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		1FDDEFA5FC532D595ED42EAD7FDBB15F /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BB9038EB85AF575B7D2FE62983330303 /* MagicMapper.xcconfig */;
@@ -889,35 +906,20 @@
 			};
 			name = Release;
 		};
-		20C7D041C6AAE18939E44C4FC319D459 /* Debug */ = {
+		24073C9116ABB1DDBB656C01CF77D07D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 07C7B7FD7451991D4D251BCEB24D7CE3 /* SDKDayCheo.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SDKDayCheo/SDKDayCheo-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SDKDayCheo/SDKDayCheo-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/SDKDayCheo/SDKDayCheo.modulemap";
-				PRODUCT_MODULE_NAME = SDKDayCheo;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SDKDayCheo";
+				IBSC_MODULE = SDKDayCheo;
+				INFOPLIST_FILE = "Target Support Files/SDKDayCheo/ResourceBundle-SDKDayCheo-SDKDayCheo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				PRODUCT_NAME = SDKDayCheo;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -1020,7 +1022,7 @@
 			};
 			name = Release;
 		};
-		76E0E81ABE49AFE69BAEBD9DEC960F64 /* Release */ = {
+		7547FCA6939D6F7BE2778350BB1D7426 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 07C7B7FD7451991D4D251BCEB24D7CE3 /* SDKDayCheo.xcconfig */;
 			buildSettings = {
@@ -1036,7 +1038,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SDKDayCheo/SDKDayCheo-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SDKDayCheo/SDKDayCheo-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/SDKDayCheo/SDKDayCheo.modulemap";
@@ -1047,11 +1049,10 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1177,23 +1178,6 @@
 			};
 			name = Debug;
 		};
-		958315F7351730EAA41D8833A24E9057 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07C7B7FD7451991D4D251BCEB24D7CE3 /* SDKDayCheo.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SDKDayCheo";
-				IBSC_MODULE = SDKDayCheo;
-				INFOPLIST_FILE = "Target Support Files/SDKDayCheo/ResourceBundle-SDKDayCheo-SDKDayCheo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = SDKDayCheo;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
 		984DE1B150B01A195885C35B1FF27ADF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BB9038EB85AF575B7D2FE62983330303 /* MagicMapper.xcconfig */;
@@ -1258,20 +1242,36 @@
 			};
 			name = Debug;
 		};
-		B12F8BD12369FBF816CFC37D35FEFD29 /* Release */ = {
+		AED5FBEE95820C164E6ADF74CF4893E3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 07C7B7FD7451991D4D251BCEB24D7CE3 /* SDKDayCheo.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SDKDayCheo";
-				IBSC_MODULE = SDKDayCheo;
-				INFOPLIST_FILE = "Target Support Files/SDKDayCheo/ResourceBundle-SDKDayCheo-SDKDayCheo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SDKDayCheo/SDKDayCheo-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SDKDayCheo/SDKDayCheo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/SDKDayCheo/SDKDayCheo.modulemap";
+				PRODUCT_MODULE_NAME = SDKDayCheo;
 				PRODUCT_NAME = SDKDayCheo;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1364,8 +1364,8 @@
 		51A7B69A1FB2AF5A8FB669C5638647FF /* Build configuration list for PBXNativeTarget "SDKDayCheo-SDKDayCheo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				958315F7351730EAA41D8833A24E9057 /* Debug */,
-				B12F8BD12369FBF816CFC37D35FEFD29 /* Release */,
+				24073C9116ABB1DDBB656C01CF77D07D /* Debug */,
+				17B52747A062C1EFD093841FD41C5F4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1382,8 +1382,8 @@
 		AEAF38AF4CA5E9AB0CAB3F859FB8DB0A /* Build configuration list for PBXNativeTarget "SDKDayCheo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				20C7D041C6AAE18939E44C4FC319D459 /* Debug */,
-				76E0E81ABE49AFE69BAEBD9DEC960F64 /* Release */,
+				7547FCA6939D6F7BE2778350BB1D7426 /* Debug */,
+				AED5FBEE95820C164E6ADF74CF4893E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
