@@ -42,6 +42,7 @@ extension SMNativeController {
         webView = WKWebView()
         let urlRequest = URLRequest.init(url: url)
         self.webView.load(urlRequest)
+        print("Request: \(urlRequest)")
     }
     
     func redirectLink() {
