@@ -29,7 +29,7 @@ open class SMNativeView : NSObject {
         }
     }
     
-    open func show(UIController controller: UIViewController) {
+    open func showDialog(UIController controller: UIViewController) {
         
         guard let ad = ad else { return }
         let alert = UIAlertController(title: ad.name , message: ad.desc, preferredStyle: UIAlertController.Style.alert)
