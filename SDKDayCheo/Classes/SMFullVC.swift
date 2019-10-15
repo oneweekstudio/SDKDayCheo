@@ -42,8 +42,7 @@ class SMFullVC: UIViewController,UIWebViewDelegate {
         }, completion: nil)
     }
     @IBAction func actionGet(_ sender: Any) {
-        self.webView.delegate = self
-        self.webView.loadRequest(URLRequest.init(url: URL.init(string: "https://flyingfacev2.page.link/test")!))
+        self.requestClickCampaign(self)
         self.callAPIClickAd()
     }
     
