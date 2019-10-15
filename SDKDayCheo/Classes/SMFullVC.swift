@@ -16,17 +16,21 @@ class SMFullVC: UIViewController,UIWebViewDelegate {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var webView: UIWebView!
     
-    let network:SMNetwork = SMNetwork()
-
-    var smAds:SMAds!
+    var smAds:SMAds?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        guard let smAds = self.smAds else { return }
+        print("SMAds : \(smAds.name)")
         self.imgIcon.downloaded(from: smAds.icon)
-        self.imgBanner.downloaded(from: "https://i.pinimg.com/originals/80/54/09/8054098053c9b96049c2e0c0919fd144.jpg")
+        if let asset = smAds.assets.first {
+            self.imgBanner.downloaded(from: asset.url)
+        } else {
+            self.imgBanner.downloaded(from: "https://i.pinimg.com/474x/63/ae/13/63ae13e28fa405a40ad3e78cca622291.jpg")
+        }
         self.lbTitle.text = smAds.name
         self.lbDes.text = smAds.desc
+        self.callAPIViewAd()
     }
     
     override func viewDidLayoutSubviews() {
@@ -38,44 +42,110 @@ class SMFullVC: UIViewController,UIWebViewDelegate {
         }, completion: nil)
     }
     @IBAction func actionGet(_ sender: Any) {
-//        print("run")
-//        let sv = SFSafariViewController.init(url: URL.init(string: "https://flyingfacev2.page.link/test")!)
-//        self.present(sv, animated: true, completion: nil)
-    
-      
-        
-//        network.getResponse("https://flyingfacev2.page.link/test", success: { Data
-//            in
-//
-//        }) { (error) in
-//            print(error.localizedDescription)
-//        }
         self.webView.delegate = self
         self.webView.loadRequest(URLRequest.init(url: URL.init(string: "https://flyingfacev2.page.link/test")!))
+        self.callAPIClickAd()
     }
-//    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebView.NavigationType) -> Bool {
-//        
-//        print(request.url?.absoluteString)
-//        print(request.url!.scheme!)
-//        if request.url!.scheme! == "itms-appss"{
-//         
-//            return false
-//        }
-//        return true
-//    }
+    
     @IBAction func actionClose(_ sender: Any) {
         
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "smads_close"), object: nil)
-
+        
         
         UIView.animate(withDuration: 0.3, animations: {
             self.contentView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-
+            
         }) { (status) in
             self.dismiss(animated: false) {
                 
             }
         }
     }
+    
+    
+    open func callAPIClickAd() {
+        let network = SMNetwork()
+        guard let ad = self.smAds,
+            let asset = ad.assets.first
+            else { return }
+        let adSize = "\(asset.width)x\(asset.height)"
+        network.callAPIClickAd(ad.campaign_id, size: adSize, success: { (json) in
+            print("callAPIClickAd success: \(json)")
+        }) { (error) in
+            print("callAPIClickAd error : \(error)")
+        }
+    }
+    
+    open func callAPIViewAd() {
+        let network = SMNetwork()
+        guard let ad = self.smAds,
+            let asset = ad.assets.first
+            else { return }
+        let adSize = "\(asset.width)x\(asset.height)"
+        network.callAPIViewAd(ad.campaign_id, size: adSize, success: { (json) in
+            print("callAPIViewAd success: \(json)")
+        }) { (error) in
+            print("callAPIViewAd error : \(error)")
+        }
+    }
+    
+    open func getCampaign() -> URL? {
+        guard let ad = smAds,
+            let campaign = ad.assets.first
+            else { return nil }
+        return URL.init(string: campaign.link)
+    }
+    
+    
+    open func requestClickCampaign(_ controller : UIViewController) {
+        let network = SMNetwork()
+        
+        guard let url = self.getCampaign() else { return }
+        
+        network.getResponse(url.absoluteString, success: { (keyvalue) in
+            //            print(keyvalue)
+            guard let str = keyvalue["link"] as? String else { return }
+            if self.checkDynamicLink(str: str) {
+                print("Deep link: \(str)")
+                self.openDeepLink(UIController: controller, link: str)
+            } else {
+                print("Appstore link: \(str)")
+                self.openAppStore(itms: str)
+            }
+        }) { (error) in
+            print(error)
+        }
+    }
+    
+    open func checkDynamicLink(str: String) -> Bool {
+        return !str.contains("itms")
+    }
+    
+    //Khi link nhận được từ campaign là một link dạng "dynamic link" -> Chuyển đến controller SMNativeController để xử lý deeplink
+    open func openDeepLink( UIController controller: UIViewController, link: String = "https://flyingfacev2.page.link/test") {
+        let nativeViewController = UIStoryboard.init(name: "SMNative", bundle: getBundlePath()).instantiateViewController(withIdentifier: "SMNativeController") as! SMNativeController
+        nativeViewController.modalPresentationStyle = .overCurrentContext
+        controller.present( nativeViewController, animated: false)
+    }
+    
+    //Khi link nhận được từ campaign là một link "itms" -> Chuyển sang appstore
+    open func openAppStore(itms: String) {
+        if let url = URL(string: itms),
+            UIApplication.shared.canOpenURL(url){
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:]) { (opened) in
+                    if(opened){
+                        print("App Store Opened")
+                    }
+                }
+            } else {
+                // Fallback on earlier versions
+                UIApplication.shared.openURL(url)
+            }
+        } else {
+            print("Can't Open URL on Simulator")
+        }
+    }
+    
     
 }

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import MagicMapper
+
 @objc public protocol SMInterstitialDelegate {
     @objc optional func interstitialLoaded(interstitial:SMInterstitial)
     @objc optional func interstitialError()
@@ -17,7 +19,7 @@ public class SMInterstitial: NSObject {
     fileprivate var smAds:SMAds!
     public var isLoad:Bool = false
     public var delegate:SMInterstitialDelegate!
-    let network:SMNetwork = SMNetwork()
+    var network:SMNetwork = SMNetwork()
     @objc private func adsClose(){
         if delegate != nil{
             delegate.interstitialCloseClick?()
@@ -32,15 +34,20 @@ public class SMInterstitial: NSObject {
         }
     }
      public func load(){
+        network = SMNetwork()
         network.getFull(success: { (json) in
-//            print(json)
+            print(json)
             if json["msg"] as? String == "Cross is not running." || json["error"] as? NSNumber == 1{
                 print("Tắt Quảng Cáo Chéo")
                 if self.delegate != nil{
                     self.delegate.interstitialError?()
                 }
             }else{
-                self.smAds = SMAds(json)
+                guard let data = json["data"] as? [KeyValue],
+                    let firstAds = data.first
+                    else { return }
+                self.smAds = SMAds(firstAds)
+                print("Get SMADS : \(self.smAds.name)")
                 self.isLoad = true
                 
                 if self.delegate != nil{

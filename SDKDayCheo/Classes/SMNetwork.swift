@@ -61,10 +61,10 @@ class SMNetwork: NSObject {
     public func getBanner(success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
         var params:[String:Any] = baseParam
         params.updateValue("banner", forKey: "ad_format")
-//        print(params)
+        //        print(params)
         Alamofire.request(kUrl,method: .get, parameters: params)
             .responseJSON {response in
-            
+                
                 switch (response.result){
                 case.success(let data):
                     success(data as! KeyValue)
@@ -83,27 +83,22 @@ class SMNetwork: NSObject {
         params.updateValue("1", forKey: "number")
         
         Alamofire.request(kUrl,method: .get, parameters: params)
-            
             .responseJSON {response in
-//                print(response.request?.url)
+                print(response.request?.url!)
                 switch (response.result){
                 case.success(let data):
-//                    print(data)
                     success(data as! KeyValue)
-                    
                     break
-                    
                 case .failure(let error):
                     failure(error)
                     break
                 }
-                
         }
     }
     public func getNative(success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
         var params:[String:Any] = baseParam
         params.updateValue("native", forKey: "ad_format")
-                
+        
         Alamofire.request(kUrl,method: .get, parameters: params)
             .responseJSON {response in
                 switch (response.result){
@@ -152,4 +147,44 @@ class SMNetwork: NSObject {
                 
         }
     }
+}
+
+//MARK:- Report
+extension SMNetwork {
+    
+    public func callAPIClickAd(_ campaign_id :Int, size: String ,success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
+        var params:[String:Any] = baseParam
+        params.updateValue(campaign_id, forKey: "campaign")
+        params.updateValue(size, forKey: "size")
+
+        Alamofire.request(kUrlClickAd,method: .get, parameters: params)
+            .responseJSON {response in
+                switch (response.result){
+                case.success(let data):
+                    success(data as! KeyValue)
+                    break
+                case .failure(let error):
+                    failure(error)
+                    break
+                }
+        }
+    }
+    
+    public func callAPIViewAd(_ campaign_id :Int, size: String ,success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
+           var params:[String:Any] = baseParam
+           params.updateValue(campaign_id, forKey: "campaign")
+           params.updateValue(size, forKey: "size")
+
+           Alamofire.request(kUrlViewAd,method: .get, parameters: params)
+               .responseJSON {response in
+                   switch (response.result){
+                   case.success(let data):
+                       success(data as! KeyValue)
+                       break
+                   case .failure(let error):
+                       failure(error)
+                       break
+                   }
+           }
+       }
 }

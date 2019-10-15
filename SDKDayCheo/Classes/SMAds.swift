@@ -10,9 +10,10 @@ import UIKit
 import MagicMapper
 
 @objcMembers
-public class SMAds: NSObject,Mappable {
+open class SMAds: NSObject,Mappable {
     
     public var icon = ""
+    public var campaign_id: Int = 0
     public var name = ""
     public var desc = ""
     public var screenshots:[String] = []

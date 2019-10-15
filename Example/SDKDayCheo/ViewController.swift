@@ -21,6 +21,10 @@ class ViewController: UIViewController,SMInterstitialDelegate {
         full.delegate = self
         full.load()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
 
     @IBAction func click(_ sender: Any) {
         full.show()

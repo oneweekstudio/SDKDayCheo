@@ -18,37 +18,37 @@ open class SMNativeView : NSObject {
     open func load() {
         let network = SMNetwork()
         network.getNative(success: { (json) in
-            //            print(json)
             if let data = json["data"] as? [KeyValue] {
                 if data.count > 0 {
-                    //Load complete
                     self.ad = SMAds.init(data[0])
                     self.delegate?.nativeViewDidLoad?(self)
                 }
             }
         }) { (error) in
-            //Error here
             self.delegate?.nativeView?(self, didFailWithError: error)
         }
     }
     
-    
     open func show(UIController controller: UIViewController) {
         
         guard let ad = ad else { return }
-        // create the alert
         let alert = UIAlertController(title: ad.name , message: ad.desc, preferredStyle: UIAlertController.Style.alert)
-        
-        // add the actions (buttons)
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: {action in
             self.delegate?.nativeViewDidClose?(self)
         }))
         alert.addAction(UIAlertAction(title: "Get it!", style: UIAlertAction.Style.default, handler: { action in
             self.delegate?.nativeViewDidClick?(self)
             self.requestClickCampaign(controller)
+            self.callAPIClickAd()
         }))
-        // show the alert
-        controller.present(alert, animated: true, completion: nil)
+        controller.present(alert, animated: true, completion: {
+            self.callAPIViewAd()
+        })
+    }
+    
+    
+    open func getAdsObject() -> SMAds? {
+        return self.ad
     }
     
     open func getCampaign() -> URL? {
@@ -57,10 +57,7 @@ open class SMNativeView : NSObject {
             else { return nil }
         return URL.init(string: campaign.link)
     }
-    
-    open func getAdsObject() -> SMAds? {
-        return self.ad
-    }
+
     
     open func requestClickCampaign(_ controller : UIViewController) {
         let network = SMNetwork()
@@ -68,13 +65,13 @@ open class SMNativeView : NSObject {
         guard let url = self.getCampaign() else { return }
         
         network.getResponse(url.absoluteString, success: { (keyvalue) in
-            print(keyvalue)
+//            print(keyvalue)
             guard let str = keyvalue["link"] as? String else { return }
             if self.checkDynamicLink(str: str) {
-                print("Deep link")
+                print("Deep link: \(str)")
                 self.openDeepLink(UIController: controller, link: str)
             } else {
-                print("Appstore link")
+                print("Appstore link: \(str)")
                 self.openAppStore(itms: str)
             }
         }) { (error) in
@@ -92,7 +89,7 @@ open class SMNativeView : NSObject {
         nativeViewController.modalPresentationStyle = .overCurrentContext
         controller.present( nativeViewController, animated: false)
     }
-
+    
     //Khi link nhận được từ campaign là một link "itms" -> Chuyển sang appstore
     open func openAppStore(itms: String) {
         if let url = URL(string: itms),
@@ -111,5 +108,31 @@ open class SMNativeView : NSObject {
             print("Can't Open URL on Simulator")
         }
     }
-
+    
+    open func callAPIClickAd() {
+        let network = SMNetwork()
+        guard let ad = self.ad,
+            let asset = ad.assets.first
+            else { return }
+        let adSize = "\(asset.width)x\(asset.height)"
+        network.callAPIClickAd(ad.campaign_id, size: adSize, success: { (json) in
+            print("callAPIClickAd success: \(json)")
+        }) { (error) in
+            print("callAPIClickAd error : \(error)")
+        }
+    }
+    
+    open func callAPIViewAd() {
+        let network = SMNetwork()
+        guard let ad = self.ad,
+            let asset = ad.assets.first
+            else { return }
+        let adSize = "\(asset.width)x\(asset.height)"
+        network.callAPIViewAd(ad.campaign_id, size: adSize, success: { (json) in
+            print("callAPIViewAd success: \(json)")
+        }) { (error) in
+            print("callAPIViewAd error : \(error)")
+        }
+    }
+    
 }
