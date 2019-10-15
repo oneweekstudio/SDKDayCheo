@@ -31,6 +31,46 @@ Delegate
 @objc optional func interstitialDidClick()
 @objc optional func interstitialCloseClick()
 ```
+
+
+### Quảng cáo native (Dialog)
+Khởi tạo quảng cáo dạng Native
+```ruby
+var native: SMNativeView = SMNativeView()
+```
+
+Tải quảng cáo Native
+```ruby
+       native.delegate = self
+       native.load()
+```
+
+Delegate
+```ruby
+   //Khi quảng cáo đã tải xong
+   @objc optional func nativeViewDidLoad(_ ad: SMNativeView)
+   
+   //Khi tải quảng cáo native về bị failure
+   @objc optional func nativeView(_ ad: SMNativeView, didFailWithError error: Error)
+   
+   //Khi người dùng click vào nút "Cancel"
+   @objc optional func nativeViewDidClose(_ ad: SMNativeView)
+   
+   //Khi người dùng click vào nút "Get it!"
+   @objc optional func nativeViewDidClick(_ ad: SMNativeView)
+   
+   //Hiện tại chưa dùng tới
+   @objc optional func nativeViewDidFinishHandlingClick(_ ad: SMNativeView)
+```
+
+Ví dụ
+```ruby
+    //Khi adNative load thành công. Gọi hiển thị dialog bằng cách :
+    func nativeViewDidLoad(_ ad: SMNativeView) {
+        ad.showDialog(UIController: self) // Gọi hiển thị quảng cáo Dialog
+    }
+```
+
 ## Requirements
 - iOS 9.0
 - Xcode 10.2+
@@ -43,6 +83,7 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'SDKDayCheo', :git => 'https://github.com/oneweekstudio/SDKDayCheo.git', :branch => 'master'
 ```
+
 
 ## Author
 

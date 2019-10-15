@@ -48,10 +48,7 @@ class ViewController: UIViewController,SMInterstitialDelegate {
 extension ViewController : SMNativeViewDelegate {
     
     func nativeViewDidLoad(_ ad: SMNativeView) {
-        print("Load success")
         ad.showDialog(UIController: self)
-//        print(ad.getAdsObject())
-//        ad.presen
     }
     
     func nativeView(_ ad: SMNativeView, didFailWithError error: Error) {
