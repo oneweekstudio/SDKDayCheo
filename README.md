@@ -33,7 +33,7 @@ Delegate
 ```
 
 
-### Quảng cáo native (Dialog)
+### Quảng cáo Native ( dạng hiển thị Dialog )
 Khởi tạo quảng cáo dạng Native
 ```ruby
 var native: SMNativeView = SMNativeView()
@@ -69,6 +69,32 @@ Ví dụ
     func nativeViewDidLoad(_ ad: SMNativeView) {
         ad.showDialog(UIController: self) // Gọi hiển thị quảng cáo Dialog
     }
+```
+
+### Quảng cáo Native tùy chỉnh
+Class SMNativeView  : Hỗ trợ lấy  Ad Unit, Redirect link, Call API report
+```ruby
+   //Hàm trả về Ad Unit
+   func getAdsObject() -> SMAds?
+   
+   //Khi người dùng ấn vào nút "download, hay get it!"
+   //Việc này sẽ kiểm tra link từ server trả về là deeplink hay store link để điều hướng cho phù hợp
+   func requestClickCampaign()
+   
+   //Kiểm tra store link hay deeplink
+   func checkDynamicLink() -> Bool 
+   
+   //Hàm này chuyển sang 1 controller  trong SMNative.storyboard để xử lý deeplink
+   func openDeepLink()
+   
+   //Hàm này chuyển sang store
+   func openAppStore()
+   
+   //Hàm này được gọi khi người dùng ấn "get it"
+   func callAPIClickAd()
+   
+   //Hàm này được gọi khi native custom show
+   func callAPIClickAd()
 ```
 
 ## Requirements
