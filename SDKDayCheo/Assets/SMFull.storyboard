@@ -27,6 +27,10 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBW-Zh-57j">
                                 <rect key="frame" x="41.333333333333343" y="179.33333333333331" width="331.33333333333326" height="537.33333333333348"/>
                                 <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="aLg-CE-RHZ">
+                                        <rect key="frame" x="155.66666666666666" y="258.66666666666663" width="20" height="20"/>
+                                        <color key="color" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4B3-u4-EAg">
                                         <rect key="frame" x="0.0" y="0.0" width="331.33333333333331" height="537.33333333333337"/>
                                     </imageView>
@@ -125,12 +129,14 @@
                                     <constraint firstAttribute="trailing" secondItem="4B3-u4-EAg" secondAttribute="trailing" id="6Ig-k3-Ry9"/>
                                     <constraint firstItem="4B3-u4-EAg" firstAttribute="top" secondItem="hBW-Zh-57j" secondAttribute="top" id="D1b-nl-HcW"/>
                                     <constraint firstItem="4B3-u4-EAg" firstAttribute="leading" secondItem="hBW-Zh-57j" secondAttribute="leading" id="DfE-HV-b5e"/>
+                                    <constraint firstItem="aLg-CE-RHZ" firstAttribute="centerX" secondItem="hBW-Zh-57j" secondAttribute="centerX" id="KRq-5T-tb9"/>
                                     <constraint firstAttribute="trailing" secondItem="Oni-Jl-Eym" secondAttribute="trailing" id="OLl-WR-Sxx"/>
                                     <constraint firstItem="Oni-Jl-Eym" firstAttribute="height" secondItem="hBW-Zh-57j" secondAttribute="height" multiplier="0.3" id="aZA-ew-B9Y"/>
                                     <constraint firstItem="i4m-qv-NXN" firstAttribute="centerX" secondItem="hBW-Zh-57j" secondAttribute="centerX" id="ehj-1g-Xd6"/>
                                     <constraint firstItem="Oni-Jl-Eym" firstAttribute="top" secondItem="hBW-Zh-57j" secondAttribute="top" id="lI8-9v-rj1"/>
                                     <constraint firstAttribute="bottom" secondItem="i4m-qv-NXN" secondAttribute="bottom" constant="29" id="pRm-71-9Hx"/>
                                     <constraint firstAttribute="bottom" secondItem="4B3-u4-EAg" secondAttribute="bottom" id="qLr-Px-GlE"/>
+                                    <constraint firstItem="aLg-CE-RHZ" firstAttribute="centerY" secondItem="hBW-Zh-57j" secondAttribute="centerY" id="stR-6t-uzd"/>
                                     <constraint firstItem="Oni-Jl-Eym" firstAttribute="leading" secondItem="hBW-Zh-57j" secondAttribute="leading" id="y4v-t6-8om"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>

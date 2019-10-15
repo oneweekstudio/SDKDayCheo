@@ -17,6 +17,7 @@ class SMFullVC: UIViewController,UIWebViewDelegate {
     @IBOutlet weak var webView: UIWebView!
     
     var smAds:SMAds?
+    var isViewAnimated: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,12 +35,17 @@ class SMFullVC: UIViewController,UIWebViewDelegate {
     }
     
     override func viewDidLayoutSubviews() {
-        self.contentView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-        
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-            self.contentView.transform = CGAffineTransform(scaleX: 1, y: 1)
-            
-        }, completion: nil)
+        super.viewDidLayoutSubviews()
+        if !isViewAnimated {
+            self.contentView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                  self.contentView.transform = CGAffineTransform(scaleX: 1, y: 1)
+                  
+              }, completion: { success in
+                self.isViewAnimated = true
+            })
+        }
+  
     }
     @IBAction func actionGet(_ sender: Any) {
         self.requestClickCampaign(self)
@@ -51,8 +57,8 @@ class SMFullVC: UIViewController,UIWebViewDelegate {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "smads_close"), object: nil)
         
         
-        UIView.animate(withDuration: 0.3, animations: {
-            self.contentView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        UIView.animate(withDuration: 0.2, animations: {
+            self.contentView.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
             
         }) { (status) in
             self.dismiss(animated: false) {
