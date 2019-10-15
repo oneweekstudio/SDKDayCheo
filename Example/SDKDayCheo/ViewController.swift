@@ -49,7 +49,7 @@ extension ViewController : SMNativeViewDelegate {
     
     func nativeViewDidLoad(_ ad: SMNativeView) {
         print("Load success")
-        ad.show(UIController: self)
+        ad.showDialog(UIController: self)
 //        print(ad.getAdsObject())
 //        ad.presen
     }
