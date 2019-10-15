@@ -13,7 +13,7 @@ public class SMConfig: NSObject {
         print("Debug mode: \(isDebug)")
     }
 }
-public var smbundle = SMConfig.isDebug ? "com.cloudmusic.mymp3" : Bundle.main.bundleIdentifier!
+//public var smbundle = SMConfig.isDebug ? "com.cloudmusic.mymp3" : Bundle.main.bundleIdentifier!
 public let kUrl = "http://cpibe.appboom.net/api/v2/get_campaign"
 
 public func getBundlePath() -> Bundle {

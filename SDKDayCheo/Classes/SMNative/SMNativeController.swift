@@ -7,29 +7,41 @@
 
 import Foundation
 import UIKit
-import WebKit
+import SafariServices
+
+
+/*
+    - Chú ý: Controller này chỉ xử lý deeplink
+ 
+ */
 
 class SMNativeController : UIViewController {
     
-    var webView: WKWebView!
-
+    @IBOutlet weak var webView: UIWebView!
+    
     //Để vào trong thằng này 1 object, test thì để 1 cái string
     var dynamicLink: String?
     
-    
-    
     override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         self.load()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+    }
 }
 
 
 //Function
-extension SMNativeController {
+extension SMNativeController : SFSafariViewControllerDelegate 	{
     
     func load() {
-        //Kiểm tra xem có gắn dynamic link không ?
+        
         if SMConfig.isDebug {
             self.dynamicLink = "https://flyingfacev2.page.link/test"
         }
@@ -37,16 +49,30 @@ extension SMNativeController {
         guard
             let link = self.dynamicLink,
             let url = URL.init(string: link)
-        else { return }
+            else { return }
         
-        webView = WKWebView()
         let urlRequest = URLRequest.init(url: url)
-        self.webView.load(urlRequest)
-        print("Request: \(urlRequest)")
-    }
-    
-    func redirectLink() {
+        self.redirectLink(URLRequest: urlRequest)
         
     }
     
+    func redirectLink( URLRequest request: URLRequest) {
+        self.webView.delegate = self
+        self.webView.loadRequest(request)
+    }
+        
 }
+
+extension SMNativeController : UIWebViewDelegate {
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        print("Load success")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.dismiss(animated: false, completion: nil)
+        }
+    }
+    
+    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+        print("webView : \(error)")
+    }
+}
+

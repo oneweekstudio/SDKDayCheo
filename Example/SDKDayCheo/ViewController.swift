@@ -11,12 +11,12 @@ import SDKDayCheo
 
 class ViewController: UIViewController,SMInterstitialDelegate {
 
-    var full:SMInterstitial!
+    var full: SMInterstitial = SMInterstitial()
+    var native: SMNativeView = SMNativeView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        SMConfig.setDebug(true)
-        full = SMInterstitial()
         full.rootViewController = self
         full.delegate = self
         full.load()
@@ -32,11 +32,25 @@ class ViewController: UIViewController,SMInterstitialDelegate {
     }
     
     @IBAction func callSMNativeView(_ sender: Any) {
-        let adView = SMNativeView()
-        adView.present(self)
-        
+        native.delegate = self
+        native.load()
     }
 
     
 }
 
+
+
+extension ViewController : SMNativeViewDelegate {
+    
+    func nativeViewDidLoad(_ ad: SMNativeView) {
+        print("Load success")
+        ad.show(UIController: self)
+//        print(ad.getAdsObject())
+//        ad.presen
+    }
+    
+    func nativeView(_ ad: SMNativeView, didFailWithError error: Error) {
+        print(error)
+    }
+}

@@ -29,7 +29,10 @@ class SMNetwork: NSObject {
         }else{
             device_type = "iphone"
         }
-        baseParam = ["package_name":smbundle,
+        
+        let sm_bundle = SMConfig.isDebug ? "com.cloudmusic.mymp3" : Bundle.main.bundleIdentifier!
+        
+        baseParam = ["package_name":sm_bundle,
                      "lang":NSLocale.preferredLanguages[0],
                      "location":(Locale.current as NSLocale).object(forKey: .countryCode) as? String ?? "",
                      "orientation":orientation,
@@ -39,25 +42,19 @@ class SMNetwork: NSObject {
             "uuid":"\((UIDevice.current.identifierForVendor?.uuidString)!)",
             "system":"ios",
             "sdk_version":"1.0"]
-        //        print(baseParam)
     }
     
     public func getResponse(_ url:String ,success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
-        
-        
         Alamofire.request(url)
-            .responseString {response in
+            .responseJSON {response in
                 switch (response.result){
                 case.success(let data):
-//                    success(data as! KeyValue)
-//                    print(data)
+                    success(data as! KeyValue)
                     break
-                    
                 case .failure(let error):
                     failure(error)
                     break
                 }
-                
         }
     }
     
@@ -106,19 +103,17 @@ class SMNetwork: NSObject {
     public func getNative(success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
         var params:[String:Any] = baseParam
         params.updateValue("native", forKey: "ad_format")
+                
         Alamofire.request(kUrl,method: .get, parameters: params)
             .responseJSON {response in
                 switch (response.result){
                 case.success(let data):
                     success(data as! KeyValue)
-                    
                     break
-                    
                 case .failure(let error):
                     failure(error)
                     break
                 }
-                
         }
     }
     
