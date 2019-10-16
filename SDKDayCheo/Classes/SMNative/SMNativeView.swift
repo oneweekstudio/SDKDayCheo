@@ -29,14 +29,14 @@ open class SMNativeView : NSObject {
         }
     }
     
-    open func showDialog(UIController controller: UIViewController) {
+    open func showDialog(UIController controller: UIViewController, cancelTitle: String = "Cancel", submitTitle: String = "Get it!") {
         
         guard let ad = ad else { return }
         let alert = UIAlertController(title: ad.name , message: ad.desc, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: {action in
+        alert.addAction(UIAlertAction(title: cancelTitle, style: UIAlertAction.Style.cancel, handler: {action in
             self.delegate?.nativeViewDidClose?(self)
         }))
-        alert.addAction(UIAlertAction(title: "Get it!", style: UIAlertAction.Style.default, handler: { action in
+        alert.addAction(UIAlertAction(title: submitTitle, style: UIAlertAction.Style.default, handler: { action in
             self.delegate?.nativeViewDidClick?(self)
             self.requestClickCampaign(controller)
             self.callAPIClickAd()
@@ -46,16 +46,20 @@ open class SMNativeView : NSObject {
         })
     }
     
-    
+    //Thêm tùy chọn asset
     open func getAdsObject() -> SMAds? {
         return self.ad
     }
     
-    open func getCampaign() -> URL? {
-        guard let ad = ad,
-            let campaign = ad.assets.first
-            else { return nil }
-        return URL.init(string: campaign.link)
+    open func getCampaign(asset: SMAssets? = nil) -> URL? {
+        if let asset = asset {
+            return URL.init(string: asset.link)
+        } else {
+            guard let ad = ad,
+                let campaign = ad.assets.first
+                else { return nil }
+            return URL.init(string: campaign.link)
+        }
     }
 
     
