@@ -19,7 +19,6 @@ class ViewController: UIViewController,SMInterstitialDelegate {
         
         full.rootViewController = self
         full.delegate = self
-        full.load()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -27,7 +26,10 @@ class ViewController: UIViewController,SMInterstitialDelegate {
     }
 
     @IBAction func click(_ sender: Any) {
-        full.show()
+        full.load()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.full.show()
+        }
         
     }
     override func didReceiveMemoryWarning() {
@@ -48,6 +50,7 @@ class ViewController: UIViewController,SMInterstitialDelegate {
 extension ViewController : SMNativeViewDelegate {
     
     func nativeViewDidLoad(_ ad: SMNativeView) {
+        print("Ad load success")
         ad.showDialog(UIController: self)
     }
     

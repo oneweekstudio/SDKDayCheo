@@ -30,7 +30,7 @@ class SMNetwork: NSObject {
             device_type = "iphone"
         }
         
-        let sm_bundle = SMConfig.isDebug ? "com.cloudmusic.mymp3" : Bundle.main.bundleIdentifier!
+        let sm_bundle = SMConfig.isDebug ? "alex.test.packagename" : Bundle.main.bundleIdentifier!
         
         baseParam = ["package_name":sm_bundle,
                      "lang":NSLocale.preferredLanguages[0],
@@ -81,7 +81,7 @@ class SMNetwork: NSObject {
     public func getFull(success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
         var params:[String:Any] = baseParam
         params.updateValue("1", forKey: "number")
-        
+        params.updateValue("random", forKey: "option")
         Alamofire.request(kUrl,method: .get, parameters: params)
             .responseJSON {response in
                 print(response.request?.url!)
@@ -98,9 +98,11 @@ class SMNetwork: NSObject {
     public func getNative(success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
         var params:[String:Any] = baseParam
         params.updateValue("native", forKey: "ad_format")
-        
+        params.updateValue("random", forKey: "option")
         Alamofire.request(kUrl,method: .get, parameters: params)
             .responseJSON {response in
+                print(response.error)
+                print(response.request)
                 switch (response.result){
                 case.success(let data):
                     success(data as! KeyValue)
