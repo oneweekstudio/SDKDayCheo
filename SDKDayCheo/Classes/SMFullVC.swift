@@ -37,12 +37,12 @@ class SMFullVC: UIViewController,UIWebViewDelegate {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         if !isViewAnimated {
+            self.isViewAnimated = true
             self.contentView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                   self.contentView.transform = CGAffineTransform(scaleX: 1, y: 1)
                   
               }, completion: { success in
-                self.isViewAnimated = true
             })
         }
   
