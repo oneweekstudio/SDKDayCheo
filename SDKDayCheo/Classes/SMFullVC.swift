@@ -112,8 +112,8 @@ class SMFullVC: UIViewController,UIWebViewDelegate {
         
         network.getResponse(url.absoluteString, success: { (keyvalue) in
             //            print(keyvalue)
-//            guard let str = keyvalue["link"] as? String else { return }
-            let str = "https://ketodietfood5.page.link/u9DC?utm_source=appboom-cross-promotion&utm_campaign=com.music.dev.hung"
+            guard let str = keyvalue["link"] as? String else { return }
+            
             if self.checkDynamicLink(str: str) {
                 print("Deep link: \(str)")
                 self.openDeepLink(UIController: controller, link: str)
