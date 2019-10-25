@@ -70,10 +70,11 @@ class SMFullVC: UIViewController,UIWebViewDelegate {
     
     open func callAPIClickAd() {
         let network = SMNetwork()
-        guard let ad = self.smAds,
-            let asset = ad.assets.first
-            else { return }
-        let adSize = "\(asset.width)x\(asset.height)"
+        guard let ad = self.smAds else { return }
+        var adSize = "no-banner"
+        if let asset = ad.assets.first {
+            adSize = "\(asset.width)x\(asset.height)"
+        }
         network.callAPIClickAd(ad.campaign_id, size: adSize, success: { (json) in
             print("callAPIClickAd success: \(json)")
         }) { (error) in
@@ -83,10 +84,12 @@ class SMFullVC: UIViewController,UIWebViewDelegate {
     
     open func callAPIViewAd() {
         let network = SMNetwork()
-        guard let ad = self.smAds,
-            let asset = ad.assets.first
+        guard let ad = self.smAds
             else { return }
-        let adSize = "\(asset.width)x\(asset.height)"
+        var adSize = "no-banner"
+        if let asset = ad.assets.first {
+            adSize = "\(asset.width)x\(asset.height)"
+        }
         network.callAPIViewAd(ad.campaign_id, size: adSize, success: { (json) in
             print("callAPIViewAd success: \(json)")
         }) { (error) in
@@ -130,6 +133,7 @@ class SMFullVC: UIViewController,UIWebViewDelegate {
     open func openDeepLink( UIController controller: UIViewController, link: String = "https://flyingfacev2.page.link/test") {
         let nativeViewController = UIStoryboard.init(name: "SMNative", bundle: getBundlePath()).instantiateViewController(withIdentifier: "SMNativeController") as! SMNativeController
         nativeViewController.modalPresentationStyle = .overCurrentContext
+        nativeViewController.dynamicLink = link
         controller.present( nativeViewController, animated: false)
     }
     

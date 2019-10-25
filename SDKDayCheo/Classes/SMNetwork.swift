@@ -95,6 +95,7 @@ class SMNetwork: NSObject {
                 }
         }
     }
+    
     public func getNative(success:@escaping (KeyValue) -> Void,failure:@escaping (Error) -> Void){
         var params:[String:Any] = baseParam
         params.updateValue("native", forKey: "ad_format")

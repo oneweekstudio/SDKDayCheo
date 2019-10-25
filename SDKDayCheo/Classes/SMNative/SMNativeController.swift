@@ -51,6 +51,8 @@ extension SMNativeController : SFSafariViewControllerDelegate 	{
             let url = URL.init(string: link)
             else { return }
         
+        
+        print("link = \(url)")
         let urlRequest = URLRequest.init(url: url)
         self.redirectLink(URLRequest: urlRequest)
         
