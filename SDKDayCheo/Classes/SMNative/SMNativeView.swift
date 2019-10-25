@@ -91,6 +91,7 @@ open class SMNativeView : NSObject {
     open func openDeepLink( UIController controller: UIViewController, link: String = "https://flyingfacev2.page.link/test") {
         let nativeViewController = UIStoryboard.init(name: "SMNative", bundle: getBundlePath()).instantiateViewController(withIdentifier: "SMNativeController") as! SMNativeController
         nativeViewController.modalPresentationStyle = .overCurrentContext
+        nativeViewController.dynamicLink = link
         controller.present( nativeViewController, animated: false)
     }
     
